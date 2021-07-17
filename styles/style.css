@@ -1,10 +1,9 @@
 html,
 body {
-  height: 100%;
   display: flex;
   flex-direction: column;
-  margin:0;
-  padding:0;
+  margin: 0;
+  padding: 0;
 }
 
 li {
@@ -165,7 +164,7 @@ a:visited {
   margin-top: 0.85em;
   display: flex;
   padding-bottom: 0.75em;
-  
+
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
@@ -174,7 +173,7 @@ a:visited {
   color: #ffffff;
 }
 .sale-banner-discount {
-  display: flex;  
+  display: flex;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -188,7 +187,7 @@ a:visited {
   margin-bottom: 1.5em;
 }
 .sale-banner-detail-button {
-  display: flex; 
+  display: flex;
 
   /* margin-top: 1.8em; */
   /* margin-bottom: 10px; */
@@ -197,9 +196,9 @@ a:visited {
   font-style: normal;
   font-weight: 500;
   font-size: 0.86em;
-  line-height: 26px;  
-  justify-content: center; 
-  
+  line-height: 26px;
+  justify-content: center;
+
   width: 8em;
   height: 2em;
 
@@ -211,6 +210,86 @@ a:visited {
   border-color: #c48b98;
 }
 
+.product_card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2.5em;
+}
+
+.product_card_img {
+  display: flex;
+}
+
+.product_img {
+  display: flex;
+  max-width: 20em;
+  height: 20em;
+  object-fit: contain;
+}
+
+.product_card_info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product_card_info_title {
+  /* Card Title */
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 38px;
+  line-height: 45px;
+  /* identical to box height */
+
+  color: #000000;
+}
+
+.product_card_info_description {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 26px;
+  width: 80%;
+  display: none;
+
+  color: #000000;
+}
+
+.product_card_info_price{
+  display: flex;
+  flex-direction: row;
+  width: 100%;  
+  justify-content: space-between;
+}
+
+.like_and_buy{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.product-interaction-buttons{
+width: 60%;
+}
+
+.origional_price{
+  font-family: Roboto;
+font-style: normal;
+font-weight: 300;
+/* line-height: 33px; */
+/* identical to box height */
+
+text-decoration-line: line-through;
+
+color: #8C8C8C;
+}
+
+/* MEDIA QUERY FOR NON MOBILE HERE */
 @media only screen and (min-width: 768px) {
   .navbar-container {
     padding-top: 0.75em;
@@ -261,11 +340,22 @@ a:visited {
     justify-content: right;
   }
 
+  a{
+    cursor: pointer;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
   .footer-container {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
+    padding-top: 10px;
   }
 
   .footer-ricca-container {
@@ -284,6 +374,7 @@ a:visited {
     display: flex;
     flex-direction: column;
     justify-content: end;
+    margin-top: 10px;
   }
 
   .footer-logo-container {
@@ -291,7 +382,6 @@ a:visited {
   }
 
   .sale-banner {
-
   }
 
   .sale-banner-internal-border {
@@ -308,10 +398,32 @@ a:visited {
 
   .sale-banner-discount {
     font-size: 2.96em;
-    margin-bottom: .5em;
-    
+    margin-bottom: 0.5em;
   }
 
-  .sale-banner-detail-button {
+  .product_card_info_description{
+    display: flex;
   }
+
+  .product_card{
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    
+    margin-bottom: 10px;
+  }
+
+  .product_card_info{
+    padding-top: 2em;
+    padding-left: 3em;
+    
+    
+    box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    border-left: none;
+  }
+  .product_card_info_description{
+    margin-bottom: 6em;
+  }
+  
 }
